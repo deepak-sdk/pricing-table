@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Price } from "./Price";
 import "./PricingTable.css";
 
 export const PricingTable = () => {
-  const [selected, setSelected] = useState(false);
+  const [monthly, setSelected] = useState(true);
 
   const triggerToggle = () => {
-    setSelected(!selected);
+    setSelected(!monthly);
   };
   return (
     <>
@@ -16,12 +17,15 @@ export const PricingTable = () => {
 
       <div className="pricing-monthly-annual-button">
         <div
-          className={`pricing-monthly ${selected && "pricing-selected"}`}
+          className={`pricing-monthly ${monthly ? "pricing-selected" : ""}`}
           onClick={triggerToggle}
         >
           monthly
         </div>
-        <div className="pricing-annual " onClick={() => {}}>
+        <div
+          className={`pricing-annual ${!monthly ? "pricing-selected" : ""}`}
+          onClick={triggerToggle}
+        >
           annual
         </div>
       </div>
@@ -60,7 +64,7 @@ export const PricingTable = () => {
             </span>
           </div>
           <div className="pricing-cards-price">
-            <h1>$5</h1>
+            <Price price={5} monthly={monthly} />
             <div>
               <span>/month</span>
             </div>
@@ -90,7 +94,7 @@ export const PricingTable = () => {
             </span>
           </div>
           <div className="pricing-cards-price">
-            <h1>$7</h1>
+            <Price price={7} monthly={monthly} />
             <div>
               <span>/user/month</span>
               <p>Start with minimum 5 users for $25.</p>
