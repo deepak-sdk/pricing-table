@@ -90,6 +90,7 @@
 .pricing-cards-lists {
   background-color: rgba(214, 214, 214, 0.726);
   padding-bottom: 50px;
+  height: 220px;
 }
 .pricing-cards-lists ul {
   padding: 30px 0 0 30px;

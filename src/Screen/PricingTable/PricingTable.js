@@ -64,7 +64,7 @@ export const PricingTable = () => {
             </span>
           </div>
           <div className="pricing-cards-price">
-            <Price price={5} monthly={monthly} />
+            <Price price={7} monthly={monthly} />
             <div>
               <span>/month</span>
             </div>
@@ -94,7 +94,7 @@ export const PricingTable = () => {
             </span>
           </div>
           <div className="pricing-cards-price">
-            <Price price={7} monthly={monthly} />
+            <Price price={9} monthly={monthly} />
             <div>
               <span>/user/month</span>
               <p>Start with minimum 5 users for $25.</p>
